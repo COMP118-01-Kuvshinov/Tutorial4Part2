@@ -12,7 +12,7 @@ using namespace std;
 /**
 * @todo
 */
-void printMatrix(const float mat[][MAX_COL], const int maxRow)
+void printMatrix(const double mat[][MAX_COL], const int maxRow)
 {
 	cout << "Content of Matrix is:" << endl;
 	for (int i = 0; i < maxRow; i++)
@@ -30,12 +30,12 @@ void printMatrix(const float mat[][MAX_COL], const int maxRow)
 /**
 * @todo
 */
-float sumOfCol(const float mat[][MAX_COL], const int column, const int maxRow)
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 {
 	assert((column - 1) >= 0 && (column - 1) < MAX_COL);
 	assert(maxRow > 0);
 
-	float sum = 0;
+	double sum = 0;
 
 	for (int i = 0; i < maxRow; i++)
 	{
@@ -48,11 +48,11 @@ float sumOfCol(const float mat[][MAX_COL], const int column, const int maxRow)
 /**
 * @todo
 */
-float sumOfRow(const float mat[][MAX_COL], const int row, const int maxRow)
+double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 {
 	assert((row - 1) >= 0 && (row - 1) < maxRow);
 	assert(MAX_COL > 0);
-	float sum = 0;
+	double sum = 0;
 
 	for (int i = 0; i < MAX_COL; i++)
 	{
@@ -65,7 +65,7 @@ float sumOfRow(const float mat[][MAX_COL], const int row, const int maxRow)
 /**
 * @todo
 */
-void fillWithRandomNum(float mat[][MAX_COL], const int maxRow)
+void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
 {
 	for (int i = 0; i < maxRow; i++)
 	{
