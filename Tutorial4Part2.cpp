@@ -12,6 +12,8 @@ using namespace std;
 */
 int main()
 {
+    srand(time(0));
+
     const int MAX_ROW = 4;
 
     double mat[MAX_ROW][MAX_COL] = { 1, 2, 3, 4, 5};
