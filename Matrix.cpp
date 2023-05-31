@@ -12,7 +12,7 @@ using namespace std;
 /**
 * @todo
 */
-void printMatrix(const double mat[][MAX_COL], const int maxRow)
+void printMatrix(const float mat[][MAX_COL], const int maxRow)
 {
 	cout << "Content of Matrix is:" << endl;
 	for (int i = 0; i < maxRow; i++)
@@ -30,16 +30,16 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow)
 /**
 * @todo
 */
-double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+float sumOfCol(const float mat[][MAX_COL], const int column, const int maxRow)
 {
-	assert((column) >= 0 && (column) < MAX_COL);
+	assert((column - 1) >= 0 && (column - 1) < MAX_COL);
 	assert(maxRow > 0);
 
-	double sum = 0;
+	float sum = 0;
 
 	for (int i = 0; i < maxRow; i++)
 	{
-		sum += mat[i][column];
+		sum += mat[i][column - 1];
 	}
 
 	return sum;
@@ -47,36 +47,16 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 
 /**
 * @todo
-* 
-* WARNING: Caller must use delete[] on the return array
-* 
-* @return Returns the sum of all columns as a dynamically
-* created array. Remember to delete[]
 */
-double* sumOfCols(const double mat[][MAX_COL], const int maxRow)
+float sumOfRow(const float mat[][MAX_COL], const int row, const int maxRow)
 {
-	double* sums = new double[MAX_COL] {0};
-
-	for (int i = 0; i < maxRow; i++)
-	{
-		sums[i] = sumOfCol(mat, i, maxRow);
-	}
-
-	return sums;
-}
-
-/**
-* @todo
-*/
-double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
-{
-	assert((row) >= 0 && (row) < maxRow);
+	assert((row - 1) >= 0 && (row - 1) < maxRow);
 	assert(MAX_COL > 0);
-	double sum = 0;
+	float sum = 0;
 
 	for (int i = 0; i < MAX_COL; i++)
 	{
-		sum += mat[row][i];
+		sum += mat[row - 1][i];
 	}
 
 	return sum;
@@ -84,28 +64,8 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 
 /**
 * @todo
-*
-* WARNING: Caller must use delete[] on the return array
-*
-* @return Returns the sum of all rows as a dynamically
-* created array. Remember to delete[]
 */
-double* sumOfRows(const double mat[][MAX_COL], const int maxRow)
-{
-	double* sums = new double[maxRow] {0};
-
-	for (int i = 0; i < maxRow; i++)
-	{
-		sums[i] = sumOfRow(mat, i, maxRow);
-	}
-
-	return sums;
-}
-
-/**
-* @todo
-*/
-void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
+void fillWithRandomNum(float mat[][MAX_COL], const int maxRow)
 {
 	for (int i = 0; i < maxRow; i++)
 	{

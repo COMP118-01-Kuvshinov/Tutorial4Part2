@@ -14,7 +14,7 @@ int main()
 {
     const int MAX_ROW = 4;
 
-    double mat[MAX_ROW][MAX_COL] = { 1, 2, 3, 4, 5};
+    float mat[MAX_ROW][MAX_COL] = { 1, 2, 3, 4, 5 };
     int choice, column, row;
 
     do
@@ -23,9 +23,7 @@ int main()
             << "2: Sum of the column" << endl
             << "3: Sum of the row" << endl
             << "4: Fill with random" << endl
-            << "5: Sums of columns" << endl
-            << "6: Sums of rows" << endl
-            << "9: Exit" << endl
+            << "8: Exit" << endl
             << "Enter choice: ";
         cin >> choice;
 
@@ -60,31 +58,7 @@ int main()
             fillWithRandomNum(mat, MAX_ROW);
             cout << "The array was filled with random numbers" << endl;
             break;
-        case 5:
-            double* sums;
-
-            sums = sumOfCols(mat, MAX_ROW);
-            for (int i = 0; i < MAX_COL; i++)
-            {
-                cout << "Sum of " << i + 1 << ": " << sums[i] << endl;
-            }
-            cout << endl;
-
-            delete[] sums;
-            break;
-        case 6:
-            double* sums2;
-
-            sums2 = sumOfRows(mat, MAX_ROW);
-            for (int i = 0; i < MAX_ROW; i++)
-            {
-                cout << "Sum of " << i + 1 << ": " << sums2[i] << endl;
-            }
-            cout << endl;
-
-            delete[] sums2;
-            break;
-        case 9:
+        case 8:
             break;
         default:
             cout << "Wrong choice" << endl;
