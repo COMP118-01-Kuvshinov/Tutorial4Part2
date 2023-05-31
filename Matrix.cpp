@@ -153,7 +153,7 @@ void fillWOnes(double mat[][MAX_COL], const int maxRow)
 	{
 		for (int j = 0; j < MAX_COL; j++)
 		{
-			mat[i][j] = 1;
+			mat[i][j] = 0;
 		}
 	}
 }
