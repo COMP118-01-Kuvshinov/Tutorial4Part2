@@ -1,6 +1,12 @@
-﻿/** Tutorial4Part2.cpp
-* @todo
-*/
+﻿/** \file Tutorial4Part2.cpp
+ *  \brief     Matrix program
+ *  \details   Small program that works with a matrix of numbers
+ *  \author    Igor Kuvshinov
+ *  \version   0.1
+ *  \date      30/05/2023
+ *  \bug       None
+ *  \copyright University of Nicosia.
+ */
 
 #include <iostream>
 #include "Matrix.h"
@@ -8,8 +14,10 @@
 using namespace std;
 
 /**
-* @todo
-*/
+ * <code>main</code> is the main function of this program.
+ * <BR>
+ * @return Returns 0 if success, any other value otherwise.
+ */
 int main()
 {
     srand(time(0));
@@ -137,4 +145,6 @@ int main()
     } while (choice != 10);
 
     cout << "Have a nice day!" << endl;
+
+    return 0;
 }
