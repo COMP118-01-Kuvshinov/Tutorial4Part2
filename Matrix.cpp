@@ -95,7 +95,7 @@ double* sumOfRows(const double mat[][MAX_COL], const int maxRow)
 
 	for (int i = 0; i < maxRow; i++)
 	{
-		sums[i] = sumOfRow(mat, i + 1, maxRow);
+		sums[i] = sumOfRow(mat, i, maxRow);
 	}
 
 	return sums;
@@ -153,7 +153,7 @@ void fillWOnes(double mat[][MAX_COL], const int maxRow)
 	{
 		for (int j = 0; j < MAX_COL; j++)
 		{
-			mat[i][j] = 0;
+			mat[i][j] = 1;
 		}
 	}
 }
